@@ -16,8 +16,8 @@
         "RepoUrl": "https://github.com/OhKannaDuh/Ferret/",
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/Ferret//releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/Ferret//releases/latest/download/latest.zip",
-        "AssemblyVersion": "0.0.3",
+        "AssemblyVersion": "0.0.4",
         "DownloadCount": 0,
-        "LastUpdated": 1746636529610
+        "LastUpdated": 1746637353343
     }
 ]
