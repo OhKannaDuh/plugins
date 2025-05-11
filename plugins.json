@@ -1,6 +1,10 @@
 [
-    {
-        "manifest": "https://raw.githubusercontent.com/OhKannaDuh/Ferret/refs/heads/master/Ferret/Ferret.json",
-        "repo": "https://github.com/OhKannaDuh/Ferret/"
-    }
+  {
+    "manifest": "https://raw.githubusercontent.com/OhKannaDuh/Ferret/refs/heads/master/Ferret/Ferret.json",
+    "repo": "https://github.com/OhKannaDuh/Ferret/"
+  },
+  {
+    "manifest": "https://raw.githubusercontent.com/OhKannaDuh/node-crowdsourcer/refs/heads/master/CENodeCrowdsourcer/CENodeCrowdsourcer.json",
+    "repo": "https://github.com/OhKannaDuh/node-crowdsourcer/"
+  }
 ]

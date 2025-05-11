@@ -17,7 +17,22 @@
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/Ferret//releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/Ferret//releases/latest/download/latest.zip",
         "AssemblyVersion": "0.12.1",
+        "DownloadCount": 101,
+        "LastUpdated": 1746992700831
+    },
+    {
+        "Author": "Faye",
+        "Name": "Node Crowdsourcer",
+        "Punchline": "Gathering node data",
+        "Description": "Gathering node data",
+        "ApplicableVersion": "any",
+        "Tags": [],
+        "InternalName": "Node Crowdsourcer",
+        "RepoUrl": "https://github.com/OhKannaDuh/node-crowdsourcer/",
+        "DownloadLinkInstall": "https://github.com/OhKannaDuh/node-crowdsourcer//releases/latest/download/latest.zip",
+        "DownloadLinkUpdate": "https://github.com/OhKannaDuh/node-crowdsourcer//releases/latest/download/latest.zip",
+        "AssemblyVersion": "0.1.0",
         "DownloadCount": 0,
-        "LastUpdated": 1746804215269
+        "LastUpdated": 1746992569818
     }
 ]
