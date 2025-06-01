@@ -17,22 +17,27 @@
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/Ferret/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/Ferret/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.12.1",
-        "DownloadCount": 116,
-        "LastUpdated": 1747070756653
+        "DownloadCount": 301,
+        "LastUpdated": 1748759871833
     },
     {
         "Author": "Faye",
-        "Name": "Node Crowdsourcer",
-        "Punchline": "Gathering node data",
-        "Description": "Gathering node data",
+        "Name": "Occult Crescent Helper",
+        "Punchline": "Some things to smooth out your Occult Crescent experience.",
+        "Description": "Some things to smooth out your Occult Crescent experience.",
+        "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/OccultCrescentHelper/refs/heads/master/assets/icon.png",
         "ApplicableVersion": "any",
-        "Tags": [],
-        "InternalName": "Node Crowdsourcer",
-        "RepoUrl": "https://github.com/OhKannaDuh/node-crowdsourcer",
-        "DownloadLinkInstall": "https://github.com/OhKannaDuh/node-crowdsourcer/releases/latest/download/latest.zip",
-        "DownloadLinkUpdate": "https://github.com/OhKannaDuh/node-crowdsourcer/releases/latest/download/latest.zip",
+        "Tags": [
+            "Occult Crescent",
+            "Occult",
+            "Crescent"
+        ],
+        "InternalName": "Occult Crescent Helper",
+        "RepoUrl": "https://github.com/OhKannaDuh/OccultCrescentHelper",
+        "DownloadLinkInstall": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
+        "DownloadLinkUpdate": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.1.0",
         "DownloadCount": 0,
-        "LastUpdated": 1747070757156
+        "LastUpdated": 1748759872288
     }
 ]
