@@ -54,7 +54,7 @@ async function buildCombinedManifest(sourceFilePath, outputFilePath) {
 
     const enriched = {
       ...manifest,
-      InternalName: manifest.Name,
+      InternalName: manifest.Name.replaceAll(" ", ""),
       RepoUrl: repoUrl,
       DownloadLinkInstall: downloadLink,
       DownloadLinkUpdate: downloadLink,
