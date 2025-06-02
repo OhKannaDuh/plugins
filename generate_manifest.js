@@ -2,19 +2,28 @@ const fetch = require("node-fetch");
 const fs = require("fs/promises");
 const path = require("path");
 
-async function getLatestReleaseVersionAndDownloadCount(repoUrl) {
+async function getLatestVersionAndTotalDownloads(repoUrl) {
   const [owner, repo] = repoUrl.replace("https://github.com/", "").split("/");
-  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/releases/latest`;
+  const releasesUrl = `https://api.github.com/repos/${owner}/${repo}/releases`;
 
-  const response = await fetch(apiUrl);
-  if (!response.ok) throw new Error(`Failed to fetch release from ${apiUrl}`);
-  const data = await response.json();
+  const response = await fetch(releasesUrl);
+  if (!response.ok)
+    throw new Error(`Failed to fetch releases from ${releasesUrl}`);
+  const releases = await response.json();
 
-  const version = data.tag_name || "0.0.1";
-  const totalDownloads = data.assets.reduce(
-    (sum, asset) => sum + asset.download_count,
-    0
-  );
+  if (!Array.isArray(releases) || releases.length === 0) {
+    return { version: "0.0.1", totalDownloads: 0 };
+  }
+
+  const latestRelease = releases.find((r) => !r.prerelease) || releases[0];
+  const version = latestRelease.tag_name || "0.0.1";
+
+  const totalDownloads = releases.reduce((sum, release) => {
+    return (
+      sum +
+      release.assets.reduce((aSum, asset) => aSum + asset.download_count, 0)
+    );
+  }, 0);
 
   return { version, totalDownloads };
 }
@@ -23,11 +32,10 @@ async function buildCombinedManifest(sourceFilePath, outputFilePath) {
   const sourceData = JSON.parse(await fs.readFile(sourceFilePath, "utf8"));
   let existingManifest = [];
 
-  // Try reading existing manifest file
   try {
     existingManifest = JSON.parse(await fs.readFile(outputFilePath, "utf8"));
   } catch (err) {
-    if (err.code !== "ENOENT") throw err; // rethrow if it's not a "file not found" error
+    if (err.code !== "ENOENT") throw err;
   }
 
   const combined = [];
@@ -42,15 +50,12 @@ async function buildCombinedManifest(sourceFilePath, outputFilePath) {
     const manifest = await manifestResp.json();
     const repoUrl = entry.repo;
     const { version: latestVersion, totalDownloads } =
-      await getLatestReleaseVersionAndDownloadCount(repoUrl);
+      await getLatestVersionAndTotalDownloads(repoUrl);
     const downloadLink = `${repoUrl}/releases/latest/download/latest.zip`;
 
-    // Try to find existing entry
     const existingEntry = existingManifest.find((e) => e.RepoUrl === repoUrl);
-    const isChanged =
-      !existingEntry ||
-      existingEntry.AssemblyVersion !== latestVersion ||
-      existingEntry.DownloadCount !== totalDownloads;
+    const versionChanged =
+      !existingEntry || existingEntry.AssemblyVersion !== latestVersion;
 
     const enriched = {
       ...manifest,
@@ -59,8 +64,10 @@ async function buildCombinedManifest(sourceFilePath, outputFilePath) {
       DownloadLinkInstall: downloadLink,
       DownloadLinkUpdate: downloadLink,
       AssemblyVersion: latestVersion,
-      DownloadCount: totalDownloads,
-      LastUpdated: isChanged
+      DownloadCount: versionChanged
+        ? totalDownloads
+        : existingEntry?.DownloadCount ?? totalDownloads,
+      LastUpdated: versionChanged
         ? Date.now()
         : existingEntry?.LastUpdated ?? Date.now(),
     };
