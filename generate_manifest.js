@@ -39,6 +39,7 @@ async function buildCombinedManifest(sourceFilePath, outputFilePath) {
   }
 
   const combined = [];
+  const updatedPlugins = [];
 
   for (const entry of sourceData) {
     const manifestResp = await fetch(entry.manifest);
@@ -56,6 +57,10 @@ async function buildCombinedManifest(sourceFilePath, outputFilePath) {
     const existingEntry = existingManifest.find((e) => e.RepoUrl === repoUrl);
     const versionChanged =
       !existingEntry || existingEntry.AssemblyVersion !== latestVersion;
+
+    if (versionChanged) {
+      updatedPlugins.push(`${manifest.Name} ${latestVersion}`);
+    }
 
     const enriched = {
       ...manifest,
@@ -77,6 +82,13 @@ async function buildCombinedManifest(sourceFilePath, outputFilePath) {
 
   await fs.writeFile(outputFilePath, JSON.stringify(combined, null, 4), "utf8");
   console.log(`Manifest written to ${outputFilePath}`);
+
+  if (updatedPlugins.length > 0) {
+    const commitMessage = updatedPlugins.join(", ");
+    console.log(`Suggested commit message:\n${commitMessage}`);
+  } else {
+    console.log("No plugins updated; no commit message necessary.");
+  }
 }
 
 buildCombinedManifest("plugins.json", "manifest.json");
