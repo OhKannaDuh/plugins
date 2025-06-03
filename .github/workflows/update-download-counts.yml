@@ -21,7 +21,7 @@ jobs:
         run: npm install node-fetch@2
 
       - name: Run update-download-counts script
-        run: node update-download-counts.js
+        run: node update_download_counts.js
 
       - name: Commit and push changes if any
         run: |
