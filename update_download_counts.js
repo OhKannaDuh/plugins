@@ -3,23 +3,45 @@ const fs = require("fs/promises");
 
 async function getTotalDownloads(repoUrl) {
   const [owner, repo] = repoUrl.replace("https://github.com/", "").split("/");
-  const releasesUrl = `https://api.github.com/repos/${owner}/${repo}/releases`;
+  const releasesBaseUrl = `https://api.github.com/repos/${owner}/${repo}/releases`;
 
-  const response = await fetch(releasesUrl);
-  if (!response.ok)
-    throw new Error(`Failed to fetch releases from ${releasesUrl}`);
-  const releases = await response.json();
+  let page = 1;
+  const perPage = 100;
+  let allReleases = [];
+  let hasMore = true;
 
-  if (!Array.isArray(releases) || releases.length === 0) {
+  while (hasMore) {
+    const url = `${releasesBaseUrl}?per_page=${perPage}&page=${page}`;
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch releases from ${url}`);
+    }
+
+    const releases = await response.json();
+    allReleases = allReleases.concat(releases);
+
+    hasMore = releases.length === perPage;
+    page++;
+  }
+
+  if (allReleases.length === 0) {
+    console.log(`${repo}: No releases found.`);
     return 0;
   }
 
-  return releases.reduce((sum, release) => {
-    return (
-      sum +
-      release.assets.reduce((aSum, asset) => aSum + asset.download_count, 0)
+  let totalDownloads = 0;
+
+  allReleases.forEach((release) => {
+    const releaseTag = release.tag_name || "<no-tag>";
+    const releaseDownloadCount = release.assets.reduce(
+      (sum, asset) => sum + asset.download_count,
+      0
     );
-  }, 0);
+    totalDownloads += releaseDownloadCount;
+  });
+
+  return totalDownloads;
 }
 
 async function updateDownloadCounts(manifestPath) {
