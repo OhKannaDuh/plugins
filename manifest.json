@@ -46,5 +46,25 @@
         "AssemblyVersion": "0.42.0",
         "DownloadCount": 18593,
         "LastUpdated": 1750339695206
+    },
+    {
+        "Author": "Faye",
+        "Name": "That's A Wall",
+        "InternalName": "ThatsAWall",
+        "Punchline": "Give Vnav an occasional slap.",
+        "Description": "Tries to detect when vnavmash gets stuck running into a wall.",
+        "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/ThatsAWall/refs/heads/master/assets/icon.png",
+        "ApplicableVersion": "any",
+        "Tags": [
+            "vnavmesh",
+            "wall",
+            "stuck"
+        ],
+        "RepoUrl": "https://github.com/OhKannaDuh/ThatsAWall",
+        "DownloadLinkInstall": "https://github.com/OhKannaDuh/ThatsAWall/releases/latest/download/latest.zip",
+        "DownloadLinkUpdate": "https://github.com/OhKannaDuh/ThatsAWall/releases/latest/download/latest.zip",
+        "AssemblyVersion": "0.1.0",
+        "DownloadCount": 0,
+        "LastUpdated": 1750367047791
     }
 ]
