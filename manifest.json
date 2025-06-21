@@ -17,8 +17,8 @@
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/Ferret/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/Ferret/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.12.1",
-        "DownloadCount": 930,
-        "LastUpdated": 1749686821273
+        "DownloadCount": 1124,
+        "LastUpdated": 1750543377221
     },
     {
         "Author": "Faye",
@@ -64,7 +64,7 @@
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/ThatsAWall/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/ThatsAWall/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.1.1",
-        "DownloadCount": 6,
-        "LastUpdated": 1750378534968
+        "DownloadCount": 150,
+        "LastUpdated": 1750543377760
     }
 ]
