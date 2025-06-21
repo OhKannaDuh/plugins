@@ -43,9 +43,9 @@
         "RepoUrl": "https://github.com/OhKannaDuh/OccultCrescentHelper",
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
-        "AssemblyVersion": "0.44.2",
-        "DownloadCount": 19548,
-        "LastUpdated": 1750434785078
+        "AssemblyVersion": "0.45.0",
+        "DownloadCount": 19929,
+        "LastUpdated": 1750477185036
     },
     {
         "Author": "Faye",
