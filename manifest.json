@@ -63,8 +63,8 @@
         "RepoUrl": "https://github.com/OhKannaDuh/ThatsAWall",
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/ThatsAWall/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/ThatsAWall/releases/latest/download/latest.zip",
-        "AssemblyVersion": "0.1.1",
-        "DownloadCount": 150,
-        "LastUpdated": 1750543377760
+        "AssemblyVersion": "0.2.0",
+        "DownloadCount": 152,
+        "LastUpdated": 1750549498740
     }
 ]
