@@ -17,8 +17,8 @@
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/Ferret/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/Ferret/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.12.1",
-        "DownloadCount": 1124,
-        "LastUpdated": 1750543377221
+        "DownloadCount": 1218,
+        "LastUpdated": 1751090165905
     },
     {
         "Author": "Faye",
@@ -44,8 +44,8 @@
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.49.0",
-        "DownloadCount": 24680,
-        "LastUpdated": 1750984078525
+        "DownloadCount": 25488,
+        "LastUpdated": 1751090166436
     },
     {
         "Author": "Faye",
@@ -64,7 +64,7 @@
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/ThatsAWall/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/ThatsAWall/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.2.0",
-        "DownloadCount": 152,
-        "LastUpdated": 1750549498740
+        "DownloadCount": 417,
+        "LastUpdated": 1751090166809
     }
 ]
