@@ -7,6 +7,9 @@ function formatTimestamp(ms) {
   return date.toUTCString();
 }
 
+console.log('Repo: https://raw.githubusercontent.com/OhKannaDuh/plugins/refs/heads/master/manifest.json');
+console.log();
+
 for (const plugin of manifest) {
   const {
     Name,
@@ -22,10 +25,10 @@ for (const plugin of manifest) {
     ``,
     `${Description}`,
     ``,
-    `🔗 **Repo:** ${RepoUrl}`,
+    `🔗 **Source:** ${RepoUrl}`,
     `🏷️ **Latest Version: ${AssemblyVersion}`,
     `🕒 **Last Updated:** ${formatTimestamp(LastUpdated)}`,
-    `\n---\n`,
+    ``,
   ].join("\n");
 
   console.log(message);
