@@ -6,9 +6,5 @@
   {
     "manifest": "https://raw.githubusercontent.com/OhKannaDuh/OccultCrescentHelper/refs/heads/master/BOCCHI/BOCCHI.json",
     "repo": "https://github.com/OhKannaDuh/OccultCrescentHelper"
-  },
-  {
-    "manifest": "https://raw.githubusercontent.com/OhKannaDuh/ThatsAWall/refs/heads/master/ThatsAWall/ThatsAWall.json",
-    "repo": "https://github.com/OhKannaDuh/ThatsAWall"
   }
 ]

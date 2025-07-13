@@ -17,8 +17,8 @@
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/Ferret/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/Ferret/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.12.1",
-        "DownloadCount": 1218,
-        "LastUpdated": 1751090165905
+        "DownloadCount": 1387,
+        "LastUpdated": 1752402604879
     },
     {
         "Author": "Faye",
@@ -45,27 +45,7 @@
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.63.0",
-        "DownloadCount": 36544,
-        "LastUpdated": 1752400282555
-    },
-    {
-        "Author": "Faye",
-        "Name": "That's A Wall",
-        "InternalName": "ThatsAWall",
-        "Punchline": "Give Vnav an occasional slap.",
-        "Description": "Tries to detect when vnavmash gets stuck running into a wall.",
-        "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/ThatsAWall/refs/heads/master/assets/icon.png",
-        "ApplicableVersion": "any",
-        "Tags": [
-            "vnavmesh",
-            "wall",
-            "stuck"
-        ],
-        "RepoUrl": "https://github.com/OhKannaDuh/ThatsAWall",
-        "DownloadLinkInstall": "https://github.com/OhKannaDuh/ThatsAWall/releases/latest/download/latest.zip",
-        "DownloadLinkUpdate": "https://github.com/OhKannaDuh/ThatsAWall/releases/latest/download/latest.zip",
-        "AssemblyVersion": "0.2.0",
-        "DownloadCount": 417,
-        "LastUpdated": 1751090166809
+        "DownloadCount": 36591,
+        "LastUpdated": 1752402605436
     }
 ]
