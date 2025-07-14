@@ -44,8 +44,8 @@
         "RepoUrl": "https://github.com/OhKannaDuh/OccultCrescentHelper",
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
-        "AssemblyVersion": "0.63.0",
-        "DownloadCount": 36591,
-        "LastUpdated": 1752402605436
+        "AssemblyVersion": "0.64.0",
+        "DownloadCount": 37493,
+        "LastUpdated": 1752504633133
     }
 ]
