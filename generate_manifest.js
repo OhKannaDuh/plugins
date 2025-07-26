@@ -53,6 +53,33 @@ async function getLatestVersionAndTotalDownloads(repoUrl) {
   return { version, totalDownloads };
 }
 
+async function getLatestPreReleaseDownloadInfo(repoUrl) {
+  const [owner, repo] = repoUrl.replace("https://github.com/", "").split("/");
+  const releasesBaseUrl = `https://api.github.com/repos/${owner}/${repo}/releases`;
+
+  const response = await fetch(releasesBaseUrl);
+  if (!response.ok) {
+    console.error(`Failed to fetch releases for ${repoUrl}`);
+    return null;
+  }
+
+  const releases = await response.json();
+
+  const latestPre = releases.find((r) => r.prerelease && !r.draft);
+  if (!latestPre) return null;
+
+  const latestAsset = latestPre.assets.find(
+    (a) => a.name.toLowerCase() === "latest.zip"
+  );
+
+  if (!latestAsset) return null;
+
+  return {
+    downloadUrl: latestAsset.browser_download_url,
+    tag: latestPre.tag_name,
+  };
+}
+
 async function buildCombinedManifest(sourceFilePath, outputFilePath) {
   const sourceData = JSON.parse(await fs.readFile(sourceFilePath, "utf8"));
   let existingManifest = [];
@@ -101,6 +128,13 @@ async function buildCombinedManifest(sourceFilePath, outputFilePath) {
         ? Date.now()
         : existingEntry?.LastUpdated ?? Date.now(),
     };
+
+    const preReleaseInfo = await getLatestPreReleaseDownloadInfo(repoUrl);
+    if (preReleaseInfo != null) {
+      enriched.DownloadLinkTesting = preReleaseInfo.downloadUrl;
+      enriched.TestingAssemblyVersion = preReleaseInfo.tag;
+      updatedPlugins.push(`${manifest.Name} ${preReleaseInfo.tag} (testing)`);
+    }
 
     combined.push(enriched);
   }

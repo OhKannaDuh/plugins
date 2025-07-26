@@ -18,7 +18,9 @@
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/Ferret/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.12.1",
         "DownloadCount": 1387,
-        "LastUpdated": 1752402604879
+        "LastUpdated": 1752402604879,
+        "DownloadLinkTesting": "https://github.com/OhKannaDuh/Ferret/releases/download/0.12.2/latest.zip",
+        "TestingAssemblyVersion": "0.12.2"
     },
     {
         "Author": "Faye",
