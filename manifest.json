@@ -49,5 +49,24 @@
         "AssemblyVersion": "0.67.2",
         "DownloadCount": 43345,
         "LastUpdated": 1753426413033
+    },
+    {
+        "Author": "Faye",
+        "Name": "Twist Of Fayte",
+        "InternalName": "TwistOfFayte",
+        "Punchline": "You met with a terrible Fate. Haven't you?",
+        "Description": "You met with a terrible Fate. Haven't you?",
+        "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/TwistOfFayte/refs/heads/master/assets/icon.png",
+        "ApplicableVersion": "any",
+        "DalamudApiLevel": 12,
+        "Tags": [
+            "Fate"
+        ],
+        "RepoUrl": "https://github.com/OhKannaDuh/TwistOfFayte",
+        "DownloadCount": 0,
+        "LastUpdated": 1753627548665,
+        "IsTestingExclusive": true,
+        "DownloadLinkTesting": "https://github.com/OhKannaDuh/TwistOfFayte/releases/download/0.1.0/latest.zip",
+        "TestingAssemblyVersion": "0.1.0"
     }
 ]
