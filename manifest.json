@@ -59,6 +59,7 @@
         "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/TwistOfFayte/refs/heads/master/assets/icon.png",
         "ApplicableVersion": "any",
         "DalamudApiLevel": 12,
+        "TestingDalamudApiLevel": 12,
         "Tags": [
             "Fate"
         ],
