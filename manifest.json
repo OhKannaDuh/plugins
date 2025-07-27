@@ -59,14 +59,14 @@
         "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/TwistOfFayte/refs/heads/master/assets/icon.png",
         "ApplicableVersion": "any",
         "DalamudApiLevel": 12,
-        "TestingDalamudApiLevel": 12,
         "Tags": [
             "Fate"
         ],
         "RepoUrl": "https://github.com/OhKannaDuh/TwistOfFayte",
+        "DownloadLinkInstall": "https://github.com/OhKannaDuh/TwistOfFayte/releases/latest/download/latest.zip",
+        "DownloadLinkUpdate": "https://github.com/OhKannaDuh/TwistOfFayte/releases/latest/download/latest.zip",
+        "AssemblyVersion": "0.1.0",
         "DownloadCount": 0,
-        "LastUpdated": 1753627548665,
-        "DownloadLinkTesting": "https://github.com/OhKannaDuh/TwistOfFayte/releases/download/0.1.0/latest.zip",
-        "TestingAssemblyVersion": "0.1.0"
+        "LastUpdated": 1753628286548
     }
 ]
