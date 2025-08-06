@@ -1,11 +1,9 @@
-import { PluginEntry, CombinedPluginManifest, SourcePlugin } from "./PluginEntry";
+import { PluginEntry, SourcePlugin } from "./PluginEntry";
+import { CombinedPluginManifest } from "../../shared-types/src/PluginTypes";
 import fs from "fs/promises";
 
 export class ManifestBuilder {
-  constructor(
-    private sourcePath: string,
-    private outputPath: string
-  ) {}
+  constructor(private sourcePath: string, private outputPath: string) {}
 
   public async build(): Promise<void> {
     const sourceRaw = await fs.readFile(this.sourcePath, "utf8");
@@ -29,21 +27,32 @@ export class ManifestBuilder {
 
       if (!enriched) continue;
 
-      if (!existingEntry || existingEntry.AssemblyVersion !== enriched.AssemblyVersion) {
+      if (
+        !existingEntry ||
+        existingEntry.AssemblyVersion !== enriched.AssemblyVersion
+      ) {
         updated.push(`${enriched.Name} ${enriched.AssemblyVersion}`);
       }
 
       if (
         enriched.TestingAssemblyVersion &&
-        (!existingEntry || existingEntry.TestingAssemblyVersion !== enriched.TestingAssemblyVersion)
+        (!existingEntry ||
+          existingEntry.TestingAssemblyVersion !==
+            enriched.TestingAssemblyVersion)
       ) {
-        updated.push(`${enriched.Name} ${enriched.TestingAssemblyVersion} (testing)`);
+        updated.push(
+          `${enriched.Name} ${enriched.TestingAssemblyVersion} (testing)`
+        );
       }
 
       combined.push(enriched);
     }
 
-    await fs.writeFile(this.outputPath, JSON.stringify(combined, null, 4), "utf8");
+    await fs.writeFile(
+      this.outputPath,
+      JSON.stringify(combined, null, 4),
+      "utf8"
+    );
     console.log(`Manifest written to ${this.outputPath}`);
 
     if (updated.length > 0) {

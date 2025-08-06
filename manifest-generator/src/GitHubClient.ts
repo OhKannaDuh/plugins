@@ -22,7 +22,9 @@ export class GitHubClient {
   }
 
   private getApiBase(): string {
-    const [owner, repo] = this.repoUrl.replace("https://github.com/", "").split("/");
+    const [owner, repo] = this.repoUrl
+      .replace("https://github.com/", "")
+      .split("/");
     return `https://api.github.com/repos/${owner}/${repo}`;
   }
 
@@ -48,7 +50,10 @@ export class GitHubClient {
     return releases;
   }
 
-  public async getLatestVersionAndTotalDownloads(): Promise<{ version: string; totalDownloads: number }> {
+  public async getLatestVersionAndTotalDownloads(): Promise<{
+    version: string;
+    totalDownloads: number;
+  }> {
     const releases = await this.fetchAllReleases();
 
     if (releases.length === 0) return { version: "0.0.1", totalDownloads: 0 };
@@ -57,34 +62,46 @@ export class GitHubClient {
     const version = latest.tag_name || "0.0.1";
 
     const totalDownloads = releases.reduce(
-      (sum, release) => sum + release.assets.reduce((a, asset) => a + asset.download_count, 0),
+      (sum, release) =>
+        sum + release.assets.reduce((a, asset) => a + asset.download_count, 0),
       0
     );
 
     return { version, totalDownloads };
   }
 
-public async getLatestPreReleaseDownload(): Promise<{ downloadUrl: string; tag: string } | null> {
-  const url = `${this.getApiBase()}/releases`;
-  const res = await fetch(url);
-  if (!res.ok) return null;
+  public async getLatestPreReleaseDownload(): Promise<{
+    downloadUrl: string;
+    tag: string;
+    publishedAt: number;
+  } | null> {
+    const url = `${this.getApiBase()}/releases`;
+    const res = await fetch(url);
+    if (!res.ok) return null;
 
-  const releases: Release[] = await res.json() as Release[];
+    const releases: Release[] = (await res.json()) as Release[];
 
-  const prereleases = releases
-    .filter(r => r.prerelease && !r.draft)
-    .sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
+    const prereleases = releases
+      .filter((r) => r.prerelease && !r.draft)
+      .sort(
+        (a, b) =>
+          new Date(b.published_at).getTime() -
+          new Date(a.published_at).getTime()
+      );
 
-  for (const release of prereleases) {
-    const asset = release.assets.find(a => a.name.toLowerCase() === "latest.zip");
-    if (asset) {
-      return {
-        downloadUrl: asset.browser_download_url,
-        tag: release.tag_name,
-      };
+    for (const release of prereleases) {
+      const asset = release.assets.find(
+        (a) => a.name.toLowerCase() === "latest.zip"
+      );
+      if (asset) {
+        return {
+          downloadUrl: asset.browser_download_url,
+          tag: release.tag_name,
+          publishedAt: new Date(release.published_at).getTime(),
+        };
+      }
     }
-  }
 
-  return null;
-}
+    return null;
+  }
 }

@@ -1,6 +1,0 @@
-{
-  "name": "plugins",
-  "dependencies": {
-    "node-fetch": "^3.3.2"
-  }
-}
