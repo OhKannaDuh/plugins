@@ -1,9 +1,5 @@
 [
   {
-    "manifest": "https://raw.githubusercontent.com/OhKannaDuh/Ferret/refs/heads/master/Ferret/Ferret.json",
-    "repo": "https://github.com/OhKannaDuh/Ferret"
-  },
-  {
     "manifest": "https://raw.githubusercontent.com/OhKannaDuh/OccultCrescentHelper/refs/heads/master/BOCCHI/BOCCHI.json",
     "repo": "https://github.com/OhKannaDuh/OccultCrescentHelper"
   },
