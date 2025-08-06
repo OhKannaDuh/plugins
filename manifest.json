@@ -46,9 +46,9 @@
         "RepoUrl": "https://github.com/OhKannaDuh/OccultCrescentHelper",
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
-        "AssemblyVersion": "0.68.0",
-        "DownloadCount": 46062,
-        "LastUpdated": 1754230141025
+        "AssemblyVersion": "0.69.1",
+        "DownloadCount": 47183,
+        "LastUpdated": 1754486342394
     },
     {
         "Author": "Faye",
@@ -58,7 +58,7 @@
         "Description": "You met with a terrible Fate. Haven't you?",
         "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/TwistOfFayte/refs/heads/master/assets/icon.png",
         "ApplicableVersion": "any",
-        "DalamudApiLevel": 12,
+        "DalamudApiLevel": 13,
         "Tags": [
             "Fate"
         ],
@@ -67,6 +67,8 @@
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/TwistOfFayte/releases/latest/download/latest.zip",
         "AssemblyVersion": "0.5.1",
         "DownloadCount": 290,
-        "LastUpdated": 1754240495307
+        "LastUpdated": 1754240495307,
+        "DownloadLinkTesting": "https://github.com/OhKannaDuh/TwistOfFayte/releases/download/1.0.0-beta/latest.zip",
+        "TestingAssemblyVersion": "1.0.0-beta"
     }
 ]
