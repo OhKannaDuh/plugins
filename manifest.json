@@ -58,7 +58,7 @@
         "Description": "You met with a terrible Fate. Haven't you?",
         "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/TwistOfFayte/refs/heads/master/assets/icon.png",
         "ApplicableVersion": "any",
-        "DalamudApiLevel": 13,
+        "DalamudApiLevel": 12,
         "Tags": [
             "Fate"
         ],
@@ -68,7 +68,8 @@
         "AssemblyVersion": "0.5.1",
         "DownloadCount": 290,
         "LastUpdated": 1754240495307,
+        "TestingDalamudApiLevel": 13,
         "DownloadLinkTesting": "https://github.com/OhKannaDuh/TwistOfFayte/releases/download/1.0.0-beta/latest.zip",
-        "TestingAssemblyVersion": "1.0.0-beta"
+        "TestingAssemblyVersion": "1.0.0"
     }
 ]
