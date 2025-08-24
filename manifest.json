@@ -20,16 +20,12 @@
             "BOCCHER",
             "OCH"
         ],
-        "DalamudApiLevel": 12,
-        "AssemblyVersion": "0.69.1",
+        "DalamudApiLevel": 13,
+        "AssemblyVersion": "1.0.0",
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/latest/download/latest.zip",
-        "TestingDalamudApiLevel": 13,
-        "TestingAssemblyVersion": "1.0.0",
-        "DownloadLinkTesting": "https://github.com/OhKannaDuh/OccultCrescentHelper/releases/download/1.0.0-api13-beta/latest.zip",
-        "DownloadCount": 47183,
-        "LastUpdated": 1754488558738,
-        "TestingLastUpdated": 1754868313000
+        "DownloadCount": 50412,
+        "LastUpdated": 1756005466718
     },
     {
         "Author": "Faye",
