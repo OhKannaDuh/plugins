@@ -49,5 +49,22 @@
         "DownloadCount": 413,
         "LastUpdated": 1754488558783,
         "TestingLastUpdated": 1754513575000
+    },
+    {
+        "Author": "Faye",
+        "Name": "Workflow",
+        "InternalName": "PluginTemplate",
+        "Punchline": "",
+        "Description": "",
+        "IconUrl": "https://raw.githubusercontent.com/OhKannaDuh/PluginTemplate/refs/heads/master/assets/icon.png",
+        "ApplicableVersion": "any",
+        "RepoUrl": "https://github.com/OhKannaDuh/Workflow",
+        "Tags": [],
+        "DalamudApiLevel": 13,
+        "AssemblyVersion": "0.3.0",
+        "DownloadLinkInstall": "https://github.com/OhKannaDuh/Workflow/releases/latest/download/latest.zip",
+        "DownloadLinkUpdate": "https://github.com/OhKannaDuh/Workflow/releases/latest/download/latest.zip",
+        "DownloadCount": 0,
+        "LastUpdated": 1758545015511
     }
 ]
