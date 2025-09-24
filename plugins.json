@@ -6,9 +6,5 @@
   {
     "manifest": "https://raw.githubusercontent.com/OhKannaDuh/TwistOfFayte/refs/heads/master/TwistOfFayte/TwistOfFayte.json",
     "repo": "https://github.com/OhKannaDuh/TwistOfFayte"
-  },
-  {
-    "manifest": "https://raw.githubusercontent.com/OhKannaDuh/Workflow/refs/heads/master/Workflow/Workflow.json",
-    "repo": "https://github.com/OhKannaDuh/Workflow"
   }
 ]
