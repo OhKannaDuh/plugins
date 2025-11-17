@@ -40,10 +40,10 @@
             "Fate"
         ],
         "DalamudApiLevel": 13,
-        "AssemblyVersion": "2.1.1",
+        "AssemblyVersion": "2.2.0",
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/TwistOfFayte/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/TwistOfFayte/releases/latest/download/latest.zip",
-        "DownloadCount": 2136,
-        "LastUpdated": 1762860400803
+        "DownloadCount": 2704,
+        "LastUpdated": 1763375398486
     }
 ]
