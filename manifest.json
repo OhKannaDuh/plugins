@@ -24,7 +24,7 @@
         "AssemblyVersion": "2.1.2",
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/BOCCHI/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/BOCCHI/releases/latest/download/latest.zip",
-        "TestingDalamudApiLevel": 13,
+        "TestingDalamudApiLevel": 14,
         "TestingAssemblyVersion": "3.0.0",
         "DownloadLinkTesting": "https://github.com/OhKannaDuh/BOCCHI/releases/download/3.0.0/latest.zip",
         "DownloadCount": 60922,
