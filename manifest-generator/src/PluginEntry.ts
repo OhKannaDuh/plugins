@@ -1,7 +1,7 @@
 import { GitHubClient } from "./GitHubClient";
 import { CombinedPluginManifest } from "../../shared-types/src/PluginTypes";
 
-const CURRENT_API_VERSION = 13;
+const CURRENT_API_VERSION = 15;
 
 export interface SourcePlugin {
   repo: string;
@@ -54,9 +54,10 @@ export class PluginEntry {
         const versionMatch = preRelease.tag.match(/^(\d+\.\d+\.\d+)/);
         const apiMatch = preRelease.tag.match(/api(\d+)/i);
 
+        // Prefer apiN from tag, else the plugin manifest's API (not a stale hardcoded default).
         enriched.TestingDalamudApiLevel = apiMatch
           ? Number(apiMatch[1])
-          : CURRENT_API_VERSION;
+          : (manifest.DalamudApiLevel || CURRENT_API_VERSION);
         enriched.TestingAssemblyVersion = versionMatch ? versionMatch[1] : "";
         enriched.DownloadLinkTesting = preRelease.downloadUrl;
       }
