@@ -25,7 +25,7 @@
         "DownloadLinkInstall":  "https://github.com/OhKannaDuh/BOCCHI/releases/latest/download/latest.zip",
         "DownloadLinkUpdate":  "https://github.com/OhKannaDuh/BOCCHI/releases/latest/download/latest.zip",
         "TestingDalamudApiLevel":  15,
-        "TestingAssemblyVersion":  "4.0.1.1",
+        "TestingAssemblyVersion":  "4.0.1.2",
         "DownloadLinkTesting": "https://github.com/OhKannaDuh/BOCCHI/releases/latest/download/latest.zip",
         "DownloadCount":  84328,
         "LastUpdated":  1785612024229,
