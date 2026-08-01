@@ -1,6 +1,6 @@
 [
     {
-        "Author": "Faye, Kage",
+        "Author": "Faye",
         "Name": "Better Occult Crescent & Chest Helper Interface",
         "InternalName": "BOCCHI",
         "Punchline": "BOCCHI is here to smooth out your Occult Crescent experience.",
@@ -25,8 +25,11 @@
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/BOCCHI/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/BOCCHI/releases/latest/download/latest.zip",
         "TestingDalamudApiLevel": 15,
+        "TestingAssemblyVersion": "4.0.1.3",
+        "DownloadLinkTesting": "https://github.com/OhKannaDuh/BOCCHI/releases/download/4.0.1.3/latest.zip",
         "DownloadCount": 84372,
-        "LastUpdated": 1785614637941
+        "LastUpdated": 1785614637941,
+        "TestingLastUpdated": 1785620074000
     },
     {
         "Author": "Faye",
