@@ -51,7 +51,7 @@ export class PluginEntry {
 
       const preRelease = await client.getLatestPreReleaseDownload();
       if (preRelease) {
-        const versionMatch = preRelease.tag.match(/^(\d+\.\d+\.\d+)/);
+        const versionMatch = preRelease.tag.match(/^v?(\d+(?:\.\d+){1,3})/);
         const apiMatch = preRelease.tag.match(/api(\d+)/i);
 
         // Prefer apiN from tag, else the plugin manifest's API (not a stale hardcoded default).
