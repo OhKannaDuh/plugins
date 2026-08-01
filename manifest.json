@@ -21,11 +21,11 @@
             "OCH"
         ],
         "DalamudApiLevel": 15,
-        "AssemblyVersion": "4.0.1.2",
+        "AssemblyVersion": "3.1.2",
         "DownloadLinkInstall": "https://github.com/OhKannaDuh/BOCCHI/releases/latest/download/latest.zip",
         "DownloadLinkUpdate": "https://github.com/OhKannaDuh/BOCCHI/releases/latest/download/latest.zip",
         "TestingDalamudApiLevel": 15,
-        "TestingAssemblyVersion": "3.0.0",
+        "TestingAssemblyVersion": "4.0.1.2",
         "DownloadLinkTesting": "https://github.com/OhKannaDuh/BOCCHI/releases/latest/download/latest.zip",
         "DownloadCount": 84372,
         "LastUpdated": 1785614637941,
